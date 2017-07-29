@@ -1,4 +1,4 @@
 node {
    checkout scm
-   sh "docker build ."
+   sh "sudo docker build ."
 }
