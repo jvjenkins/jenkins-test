@@ -4,10 +4,12 @@
 //}
 pipeline {
     agent any
-    stage('Build Image') {
-        steps {
-            checkout scm
-            sh "sudo docker build -f jojo/Dockerfile ."            
+    stages {
+        stage('Build Image') {
+            steps {
+                checkout scm
+                sh "sudo docker build -f jojo/Dockerfile ."            
+            }
         }
     }
 }
